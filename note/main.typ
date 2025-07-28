@@ -6,6 +6,8 @@
 #show <b>: set text(fill: blue) // 青字
 // チートシート: https://github.com/rayfiyo/my-typst/blob/main/note/main.typ
 
+#show: notes.with(text(size: 36pt, fill: black)[見出し]);
+
 /*
 #bibliography("references.yml", title: "参考文献", style: "ieee")
 
