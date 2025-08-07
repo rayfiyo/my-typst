@@ -11,6 +11,7 @@
 #let spacing_size = 1.2em
 
 #set heading(numbering: "1.")
+#set enum(numbering: "1.a)")
 #set math.equation(supplement: "式", numbering: numbering.with("(1.1)"))
 #set text(font: serif_fonts, size: font_sizes.normal)
 #set par(
