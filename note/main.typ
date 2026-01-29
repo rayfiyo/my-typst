@@ -1,5 +1,6 @@
-#import "@preview/codelst:2.0.2": sourcecode, sourcefile, lineref, code-frame
 #import "@preview/obsidius:0.1.0": *
+#import "@preview/gentle-clues:1.3.0": *
+#import "@preview/zebraw:0.6.1": *
 #set text(font: "Noto Serif CJK JP", size: 12pt)
 #set figure(supplement: [図])
 #set math.equation(supplement: [式], numbering: "(1)")
@@ -8,14 +9,24 @@
 
 #show: notes.with(text(size: 36pt, fill: black)[見出し]);
 
-/*
-#bibliography("references.yml", title: "参考文献", style: "ieee")
+/* = チートシート
 
-= チートシート
+== https://github.com/jomaway/typst-gentle-clues
 
-== jneug/typst-codelst
+// idea, example, warning, memo, code, abstract, experiment, success, quotation,
+// danger, question, task, tip, goal, info, error, conclusion, notify,
+#info(title: "意外と Info は使わない気がする")[ This is the info clue ... ]
 
-#sourcecode(numbers-start: 1)[```c #include <stdio.h> ```]
+== https://github.com/hongjr03/typst-zebraw
+
+// #show: zebraw を入れたら全ての ``` が zebraw になる
+
+#zebraw(
+  numbering-offset: 2, // 行カウントが 3 から始まる
+  ```c
+  #include <stdio.h>
+  ```,
+)
 
 == l0drex/obsidius
 
