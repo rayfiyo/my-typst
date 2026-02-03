@@ -1,11 +1,18 @@
-#import "@preview/codelst:2.0.2": sourcecode, sourcefile, lineref, code-frame
+#import "@preview/codelst:2.0.2": code-frame, lineref, sourcecode, sourcefile
 #import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
 #import "cover.typ": cover
 
-#let font_sizes = (h1: 18pt, h2: 16pt, h3: 14pt, h4: 12pt, normal: 11pt, math: 12pt)
-#let code_fonts = ("UDEV Gothic 35NF")
-#let math_fonts = ("New Computer Modern Math")
-#let serif_fonts = ("New Computer Modern", "Noto Serif CJK JP", "IPAexMincho",)
+#let font_sizes = (
+  h1: 18pt,
+  h2: 16pt,
+  h3: 14pt,
+  h4: 12pt,
+  normal: 11pt,
+  math: 12pt,
+)
+#let code_fonts = "UDEV Gothic 35NF"
+#let math_fonts = "New Computer Modern Math"
+#let serif_fonts = ("New Computer Modern", "Noto Serif CJK JP", "IPAexMincho")
 #let sans_fonts = ("Noto Sans CJK JP", "IPAexGothic")
 #let leading_size = 1.0em
 #let spacing_size = 1.2em
@@ -15,10 +22,15 @@
 #set math.equation(supplement: "式", numbering: numbering.with("(1.1)"))
 #set text(font: serif_fonts, size: font_sizes.normal)
 #set par(
-  first-line-indent: 1em, leading: leading_size, spacing: spacing_size, justify: true,
+  first-line-indent: 1em,
+  leading: leading_size,
+  spacing: spacing_size,
+  justify: true,
 )
 #set page(
-  paper: "a4", columns: 1, margin: (bottom: 1.75cm, top: 2.5cm, left: 2cm, right: 2cm),
+  paper: "a4",
+  columns: 1,
+  margin: (bottom: 1.75cm, top: 2.5cm, left: 2cm, right: 2cm),
 )
 
 #show figure.where(kind: image): set figure(supplement: "図")
@@ -26,17 +38,23 @@
 #show math.equation: set text(font: math_fonts, size: font_sizes.math)
 #show raw: set text(font: code_fonts, size: font_sizes.normal)
 #show heading: it => {
-  par(text(size: 0pt, "")); v(- spacing_size / 2)
+  par(text(size: 0pt, ""))
+  v(-spacing_size / 2)
   text(font: sans_fonts, weight: "medium")[#it]
-  par(text(size: 0pt, "")); v(- spacing_size / 2)
+  par(text(size: 0pt, ""))
+  v(-spacing_size / 2)
 }
 #show: remove-cjk-break-space // from @preview/cjk-unbreak
 
 // 表紙
 
 #cover(
-  exp_no: "10", title: "たいとる", sub_title: "～さぶたいとる～", //
-  author_id: "12番", author_name: "両辺 移行", exp_date: "2025年6月18日",
+  exp_no: "10",
+  title: "たいとる",
+  sub_title: "～さぶたいとる～", //
+  author_id: "12番",
+  author_name: "両辺 移行",
+  exp_date: "2025年6月18日",
 )
 
 // 本文
