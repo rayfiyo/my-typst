@@ -23,6 +23,7 @@
 
 #zebraw(
   numbering-offset: 2, // 行カウントが 3 から始まる
+  lang: "C言語", // 表示する言語名
   ```c
   #include <stdio.h>
   ```,
