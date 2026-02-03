@@ -1,5 +1,6 @@
 #import "@preview/codelst:2.0.2": code-frame, lineref, sourcecode, sourcefile
 #import "@preview/cjk-unbreak:0.1.0": remove-cjk-break-space
+#import "@preview/zebraw:0.6.1": *
 #import "cover.typ": cover
 
 #let font_sizes = (
@@ -75,11 +76,21 @@
 
 #bibliography("references.yml", title: "参考文献", style: "ieee")
 
-// チートシート: https://github.com/rayfiyo/my-typst/blob/main/note/main.typ
-// = チートシート
+// = チートシート: https://github.com/rayfiyo/my-typst/blob/main/note/main.typ
 //
-// - コードブロック
-//   #sourcecode(numbers-start: 1)[```c #include <stdio.h> ```]
+// == https://github.com/hongjr03/typst-zebraw
+//
+// #show: zebraw を入れたら全ての ``` が zebraw になる
+//
+//  #zebraw(
+//    numbering-offset: 2, // 行カウントが 3 から始まる
+//    ```c
+//    #include <stdio.h>
+//    ```,
+//  )
+//
+// = 標準
+//
 // - 数式 と 引用
 //   $ A = mat(1, 2;3, 4) $ <eq1>
 //   @eq1 を表示（引用）
