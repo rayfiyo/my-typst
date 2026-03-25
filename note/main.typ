@@ -5,6 +5,7 @@
 #set figure(supplement: [図])
 #set math.equation(supplement: [式], numbering: "(1)")
 #show <b>: set text(fill: blue) // 青字
+#show: zebraw // note では面倒なので全ての ``` を zebraw にする
 // チートシート: https://github.com/rayfiyo/my-typst/blob/main/note/main.typ
 
 #show: notes.with(text(size: 36pt, fill: black)[見出し]);
